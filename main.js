@@ -62,18 +62,56 @@ Buon divertimento e confermate lettura come al solito :babyyoda:
 */
 
 // #preparazione
-// chidere quanti km vuole percorrere l'utente e salvarlo in una variabile
+// chidere quanti km vuole percorrere l'utente e salvarlo in una variabile salvandoli in forma numerica
+const travelLength = Number(prompt("Quanti km di vuoi percorre con il nostro treno"));
 
-// chiedere l'età e salvarlo in una varibile
 
+// chiedere l'età e salvarlo in una varibile salvandoli in forma numerica
+const travelerAge = Number(prompt("Quanti anni hai?"));
+
+// preparazione uscita
+let discountedTicketPrice = "";
+let result = "";
+
+//verifica numeri e che tipo di dato sono
+console.log(travelLength);
+console.log(typeof travelLength);
+console.log(travelerAge);
+console.log(typeof travelerAge);
 
 // #calcoli (elaborazione)
-// calcolare prezzo interno del biglietto e salvarlo in una variabile
+// creare una variabile del prezzo al km
+const pricePerKm = 0.21;
+100
+// calcolare prezzo intero del biglietto e salvarlo in una variabile
+const ticketPrice = travelLength * pricePerKm;
+
+//verifico primo risultato
+console.log(ticketPrice);
+console.log(typeof ticketPrice);
 
 // if/else -> in base all'età applicare uno sconto
 
+if (travelerAge < 18) {
+    discountedTicketPrice = ticketPrice * 0.8;
+} else if (travelerAge >= 18 && travelerAge < 65) {
+    discountedTicketPrice = ticketPrice * 1;
+} else {
+    100
+    discountedTicketPrice = ticketPrice * 0.6;
+}
+
+//verifca risultato prima della fine esercizio commentare quando il risultato torna 
+console.log(discountedTicketPrice);
+console.log(typeof discountedTicketPrice); 10
+
 
 // #output in forma umana
-// convertire il risultato con al massimo due cifre decimali
+// convertire il risultato con al massimo due cifre decimali e in stringa
+result = discountedTicketPrice.toFixed(2);
 
-// trasformare il numero in stringa
+
+console.log(result);
+console.log(typeof result);
+
+
